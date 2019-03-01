@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog - Home for all Trending News</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="appjs/app.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+      /* TODO */
+    </style>
+  </head>
+
+  <body>
+    <div class="main-house">
+    <div class="app-page" data-page="home">
+      <div class="app-topbar">
+        <div class="app-title">Report App Solution Centre</div>
+      </div>
+      <div class="app-content">
+        <div class="app-section">
+          <div class="app-button" data-target="BP">Blog Posts</div>
+          <div class="app-button" data-target="CG">Categories</div>
+          <div class="app-button" data-target="NP">Create New Post</div>
+          <div class="app-button" data-target="SUB">Subscribe for New Posts</div>
+        </div>
+      </div>
+    </div>
+    <div class="app-page" data-page="BP">
+        <div class="app-topbar">
+          <div class="app-button left" data-back data-autotitle></div>
+          <div class="app-title">Mobile Blog Posts</div>
+        </div>
+        <div class="app-content"> 
+            <div id="home">
+                    <button id="portfolio-posts-btn">Load Blog Posts</button>
+                    <h2>Posts</h2>
+                    <div id="portfolio-posts-container"></div>
+            </div>
+          <div class="app-button" data-target="home">Menu</div>
+        </div>
+      </div>
+    <div class="app-page" data-page="CG">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Categories</div>
+      </div>
+      <div class="app-content">
+          <div class="app-button" data-target="ID">Incident Posts</div>
+          <div class="app-button" data-target="AD">Accident Posts</div>
+          <div class="app-button" data-target="RT">Riot Posts</div>
+      </div>
+    </div>
+    <div class="app-page" data-page="AD">
+        <div class="app-topbar">
+          <div class="app-button left" data-back data-autotitle></div>
+          <div class="app-title">Accident Posts</div>
+        </div>
+        <div class="app-content">
+            <div id="home">
+                <button id="posts">Load Posts</button>
+                <h2>Posts</h2>
+                <div id="container"></div>
+            <div class="app-button" data-target="CG">Categories</div>
+        </div>
+      </div>
+      <div class="app-page" data-page="ID">
+          <div class="app-topbar">
+            <div class="app-button left" data-back data-autotitle></div>
+            <div class="app-title">Incident Posts</div>
+          </div>
+          <div class="app-content">
+              <div id="home">
+                      <button id="portfolio-posts">Load Posts</button>
+                      <h2>Posts</h2>
+                      <div id="portfolio-container"></div>
+              </div>
+            <div class="app-button" data-target="CG">Categories</div>
+          </div>
+        </div>
+        <div class="app-page" data-page="RT">
+            <div class="app-topbar">
+              <div class="app-button left" data-back data-autotitle></div>
+              <div class="app-title">Riot Posts</div>
+            </div>
+            <div class="app-content">
+                <div id="home">
+                    <button id="portfolio-posts-button">Load Posts</button>
+                    <h2>Posts</h2>
+                    <div id="portfolio-container-posts"></div>
+            </div>
+                <div class="app-button" data-target="CG">Categories</div>
+            </div>
+          </div>
+          <div class="app-page" data-page="NP" id="post">
+              <div class="app-topbar">
+                <div class="app-button left" data-back data-autotitle></div>
+                <div class="app-title">Create New Post</div>
+              </div>
+              <div class="app-content">
+                      <form>
+                          <div class="main-column">
+                            <h3>Add New Post</h3> 
+                            <input type="text" name="title" placeholder="Title">
+                            <textarea name="content" id="" cols="30" rows="10" placeholder="Post Content"></textarea>
+                            <button id="quick-add-button">Create Post</button>
+                          </div>
+                      </form>
+                  <div class="app-button" data-target="home">Menu</div>
+              </div>
+            </div> 
+          <div class="app-page" data-page="SUB" id="">
+            <div class="app-topbar">
+              <div class="app-button left" data-back data-autotitle></div>
+              <div class="app-title">Simply Notify</div>
+            </div>
+            <div class="app-content">
+                <button id="sign-in">Sign In</button>
+                <button id="sign-out" hidden>Sign Out</button>
+          
+                <button id="subscribe" hidden>Subscribe</button>
+                <button id="unsubscribe" hidden>Unsubscribe</button>
+          
+                <form id="send-notification-form">
+                  <label for="notification-message" class="sr-only">Notification Message</label>
+                  <textarea  id="notification-message" placeholder="What would you like to say?"
+                  maxlength="40"></textarea>
+                  <button type="submit" aria-label="send">
+                    <img src="/img/send.png" alt="send">
+                  </button>
+                </form>
+                <br> 
+                <div class="app-button" data-target="home">Menu</div>
+            </div>
+        </div>  
+    </div>
+    <script src="appjs/zepto.js"></script>
+    <script src="appjs/app.min.js"></script>
+    <script>
+      App.controller('home', function (page) {
+        // put stuff here
+      });
+
+      App.controller('page2', function (page) {
+        // put stuff here
+      });
+
+      try {
+        App.restore();
+      } catch (err) {
+        App.load('home');
+      }
+    </script>
+     <script src="/__/firebase/4.1.3/firebase.js"></script>
+     <script src="/__/firebase/init.js"></script>
+    <script src="js/fire.js"></script>
+    <script src="js/accident.js"></script>
+    <script src="js/cat.js"></script>      
+    <script src="js/incident.js"></script>      
+    <script src="js/main.js"></script>
+  </body>
+</html>

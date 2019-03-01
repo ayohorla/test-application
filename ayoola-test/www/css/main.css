@@ -1,0 +1,54 @@
+body{
+    margin: 10px;
+    padding: 10px;
+    border: 10px;
+}
+header{
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px #000 solid;
+    margin-bottom: 10px;
+}
+@media(max-width: 1024px){
+    img, html, body, #headline{max-width: 1024px;}
+}
+#portfolio-posts-btn{
+    color: crimson;
+    text-align: center;
+    margin: 10px;
+    border-bottom: #333 4px solid;
+    border-radius: 5px; 
+}
+#home{
+    text-align: center;
+    border-bottom-color: #333;
+    padding: 20px;
+}
+h2{
+    background: crimson;
+    color: #fff;
+    text-align: center;
+    border-bottom: 4px #000 solid;  
+}
+h5{
+    background-image: #333;
+    border-bottom: black 4px solid;
+}
+#portfolio-posts-container{
+    border: green solid 4px;
+}
+.main-column{
+    background-color: rgba(77, 82, 59, 0.685);
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+input, textarea{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    box-sizing: border-box;
+}
